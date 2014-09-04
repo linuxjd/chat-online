@@ -1,0 +1,59 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CAN_REGISTER	psl-config.php	/^define("CAN_REGISTER", "any");$/;"	d
+DATABASE	psl-config.php	/^define("DATABASE", "learn");    \/\/ The database name.$/;"	d
+DEFAULT_ROLE	psl-config.php	/^define("DEFAULT_ROLE", "member");$/;"	d
+HOST	psl-config.php	/^define("HOST", "localhost");     \/\/ The host you want to connect to.$/;"	d
+PASSWORD	psl-config.php	/^define("PASSWORD", "123");    \/\/ The database password. $/;"	d
+SECURE	psl-config.php	/^define("SECURE", FALSE);    \/\/ FOR DEVELOPMENT ONLY!!!!$/;"	d
+USER	psl-config.php	/^define("USER", "root");    \/\/ The database username. $/;"	d
+_SESSION	logout.php	/^$_SESSION = array();$/;"	v
+checkbrute	functions.php	/^    function checkbrute($user_id, $mysqli) {$/;"	f
+cookieParams	functions.php	/^    $cookieParams = seesion_get_cookie_params();$/;"	v
+count	functions.php	/^        $count = 1;$/;"	v
+email	process_login.php	/^    $email = $_POST['email'];$/;"	v
+email	register.inc.php	/^    $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);$/;"	v
+email	register.inc.php	/^    $email = filter_var($email, FILTER_VALIDATE_EMAIL);$/;"	v
+error_msg	register.inc.php	/^$error_msg = "";$/;"	v
+esc_url	functions.php	/^    function esc_url($url) {$/;"	f
+httponly	functions.php	/^    $httponly = true;$/;"	v
+login	functions.php	/^function login($email,$password,$mysqli){$/;"	f
+login_check	functions.php	/^                            $login_check = hash('sha512', $password . $user_browser);$/;"	v
+login_check	functions.php	/^    function login_check($mysqli) {$/;"	f
+login_string	functions.php	/^                $login_string = $_SESSION['login_string'];$/;"	v
+mysqli	db_connect.php	/^$mysqli = new mysqli(HOST, USER, PASSWORD, DATABASE);$/;"	v
+now	functions.php	/^                    $now = time();$/;"	v
+now	functions.php	/^        $now = time();$/;"	v
+params	logout.php	/^$params = session_get_cookie_params();$/;"	v
+password	functions.php	/^        $password = hash('sha512', $password.$salt);$/;"	v
+password	process_login.php	/^    $password = $_POST['p']; \/\/ The hashed password.$/;"	v
+password	register.inc.php	/^        $password = hash('sha512', $password . $random_salt);$/;"	v
+password	register.inc.php	/^    $password = filter_input(INPUT_POST, 'p', FILTER_SANITIZE_STRING);$/;"	v
+prep_stmt	register.inc.php	/^    $prep_stmt = "SELECT id FROM members WHERE email = ? LIMIT 1";$/;"	v
+prep_stmt	register.inc.php	/^    $prep_stmt = "SELECT id FROM members WHERE username = ? LIMIT 1";$/;"	v
+random_salt	register.inc.php	/^        $random_salt = hash('sha512', uniqid(mt_rand(1, mt_getrandmax()), true));$/;"	v
+sec_session_start	functions.php	/^function sec_session_start(){$/;"	f
+secure	functions.php	/^    $secure = SECURE;$/;"	v
+session_name	functions.php	/^    $session_name = 'sec_session_id';   \/\/set a custom session name$/;"	v
+stmt	register.inc.php	/^        $stmt = $mysqli->prepare($prep_stmt);$/;"	v
+stmt	register.inc.php	/^    $stmt = $mysqli->prepare($prep_stmt);$/;"	v
+strip	functions.php	/^        $strip = array('%0d', '%0a', '%0D', '%0A');$/;"	v
+url	functions.php	/^            $url = str_replace($strip, '', $url, $count);$/;"	v
+url	functions.php	/^        $url = (string) $url;$/;"	v
+url	functions.php	/^        $url = htmlentities($url);$/;"	v
+url	functions.php	/^        $url = preg_replace('|[^a-z0-9-~+_.?#=!&;,\/:%@$\\|*\\'()\\\\x80-\\\\xff]|i', '', $url);$/;"	v
+url	functions.php	/^        $url = str_replace("'", '&#039;', $url);$/;"	v
+url	functions.php	/^        $url = str_replace('&amp;', '&#038;', $url);$/;"	v
+url	functions.php	/^        $url = str_replace(';\/\/', ':\/\/', $url);$/;"	v
+user_browser	functions.php	/^                    $user_browser = $_SERVER['HTTP_USER_AGENT'];$/;"	v
+user_browser	functions.php	/^                $user_browser = $_SERVER['HTTP_USER_AGENT'];$/;"	v
+user_id	functions.php	/^                    $user_id = preg_replace("\/[^0-9]+\/", "", $user_id);$/;"	v
+user_id	functions.php	/^                $user_id = $_SESSION['user_id'];$/;"	v
+username	functions.php	/^                    $username = preg_replace("\/[^a-zA-Z0-9_\\-]+\/", "", $username);$/;"	v
+username	functions.php	/^                $username = $_SESSION['username'];$/;"	v
+username	register.inc.php	/^    $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);$/;"	v
+valid_attempts	functions.php	/^        $valid_attempts = $now - (2 * 60 * 60);$/;"	v
